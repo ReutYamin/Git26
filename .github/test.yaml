@@ -1,0 +1,24 @@
+# 1. שם ה-Workflow (ה-Commander)
+name: Hamudi Defense System
+
+# 2. הטריגר - מתי הרובוט מתעורר?
+# הבונוס: הגדרה של רשימת אירועים בעזרת סוגריים מרובעים
+on: [push, pull_request]
+
+# 3. הגדרת המשימות (הצוותים)
+jobs:
+  # שם ה-Job (הצוות)
+  security-check:
+
+    # המגרש עליו רצים (ה-Runner)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Scan for secrets
+        run: echo "Scanning for secrets..."
+
+      - name: Check Python syntax
+        run: echo "Checking Python syntax..."
+
+      - name: Success Message
+        run: echo "All clear! Hamudi can sleep now"
