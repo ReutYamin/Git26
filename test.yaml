@@ -1,0 +1,13 @@
+name: My First Action       # שם ה-Workflow (המפקד)
+on: push                    # האירוע (הטריגר)
+
+jobs:                       # כאן מתחילה רשימת הצוותים
+  check-security:           # שם ה-Job הראשון (הצוות)
+    runs-on: ubuntu-latest  # סוג המגרש (המחשב)
+    
+    steps:                  # מה הצוות עושה?
+      - name: Say Hello     # צעד 1 (שימו לב למקף!)
+        run: echo "Hello Class!"
+      
+      - name: Say Goodbye   # צעד 2
+        run: echo "Bye Bye!"
